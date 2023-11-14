@@ -1,21 +1,29 @@
 import logging
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
 
 operation = int(input('Podaj działanie, posługując się odpowiednią liczbą: 1 Dodawanie, 2 Odejmowanie, 3 Mnożenie, 4 Dzielenie: '))
-num1 = int(input('Podaj pierwszą liczbę: '))
-num2 = int(input('Podaj drugą liczbę: '))
+num1 = float(input('Podaj składnik 1. '))
+num2 = float(input('Podaj składnik 2. '))
 
 
 def calculator(operation, num1, num2):
     if operation == 1:
-        pass
+        logging.info("Dodaję {:.2f} i {:.2f} ".format(num1, num2))
+        result = num1 + num2
+        print('Wynik to: {:.2f}'.format(result))
     if operation == 2:
-        pass
+        logging.info("Odejmuję {:.2f} i {:.2f} ".format(num2, num1))
+        result = num1 - num2
+        print('Wynik to: {:.2f}'.format(result))
     if operation == 3:
-        pass
+        logging.info("Mnożę {:.2f} i {:.2f} ".format(num1, num2))
+        result = num1 * num2
+        print('Wynik to: {:.2f}'.format(result))
     if operation == 4:
-        pass
+        logging.info("Dzielę {:.2f} i {:.2f} ".format(num1, num2))
+        result = num1 / num2
+        print('Wynik to: {:.2f}'.format(result))
 
 
 if __name__ == '__main__':
-    calculator(operation)
+    calculator(operation, num1, num2)
