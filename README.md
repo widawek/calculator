@@ -1,1 +1,1 @@
-# Simple calculator app
+# Simple calculator program
